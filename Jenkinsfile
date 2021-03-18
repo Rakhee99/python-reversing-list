@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Compile') {
+        stage('Compiling-stage') {
             steps {
                bat 'lst.py'
             }
         }
-      stage('Testing Stage'){
+      stage('testing-Stage'){
         steps{
-            bat 'test'
+            bat test/Testcalc.py
         }
       }
-      stage ('Deployment Stage'){
+      stage ('Deployment-Stage'){
         steps{
           echo 'Deployment successful'
         }
