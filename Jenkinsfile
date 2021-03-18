@@ -9,7 +9,9 @@ pipeline {
         }
       stage('Testing Stage'){
         steps{
+            tool name: 'python-R', type: 'jenkins.plugins.shiningpanda.tools.PythonInstallation'
           bat '*/test/Testcalc.py'
+          echo 'test successful'  
         }
       }
       stage ('Deployment Stage'){
