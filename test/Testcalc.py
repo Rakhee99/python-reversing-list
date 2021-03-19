@@ -1,5 +1,5 @@
 import unittest
-from lst import lst1
+from calc.lst import lst1
 class testcalc(unittest.TestCase):
     def testrev1(self):
         lst = lst1()
